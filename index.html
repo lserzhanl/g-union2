@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Audio Player</title>
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="player">
+        <div class="wrapper">
+            <div class="details">
+                <div class="now-playing"></div>
+                <div class="track-art"></div>
+                <div class="track-name">Track Name</div>
+                <div class="track-artist">Track Artist</div>
+            </div>
+
+            <div class="slider_container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="0" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+            </div>
+
+            <div class="slider_container">
+                <i class="fa fa-volume-down"></i>
+                <input type="range" min="0" max="100" value="25" class="volume_slider" onchange="setVolume()">
+                <i class="fa fa-volume-up"></i>
+            </div>
+
+            <div class="buttons">
+                <div class="random-track" onclick="randomTrack()">
+                    <i class="fas fa-random fa-2x" title="random"></i>
+                </div>
+                <div class="prev-track" onclick="prevTrack()">
+                    <i class="fa fa-step-backward fa-2x"></i>
+                </div>
+                <div class="playpause-track" onclick="playpauseTrack()">
+                    <i class="fa fa-play-circle fa-5x"></i>
+                </div>
+                <div class="next-track" onclick="nextTrack()">
+                    <i class="fa fa-step-forward fa-2x"></i>
+                </div>
+                <div class="repeat-track" onclick="repeatTrack()">
+                    <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list mod-footer">
+                        <li class="footer__nav-item">
+                            <a class="github" href="https://github.com/lserzhanl" target="_blank">
+                                <img src="./assets/svg/github-logo-32.png" alt="github-logo" width="72" height="24">
+                            </a>
+                        </li>
+                        <li class="footer__nav-item mod-year">© 2022</li>
+                        <li class="footer__nav-item">
+                            <a class="rss" href="https://rs.school/js/" target="_blank">
+                                <img src="./assets/svg/rs_school_js.svg" alt="rss-logo" width="72" height="24">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+    <!-- width="105" height="32" -->
+    <!-- width="105" height="32" -->
+</body>
+
+</html>
